@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Options Trader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0d0221',    // Deep space blue/purple
+            secondary: '#261447',  // Dark violet
+            tertiary: '#2a327d',   // Indigo for cards
+            accent: '#ff4081',     // Neon pink/magenta
+            highlight: '#8a2be2',  // Blue-violet
+            'cyber-cyan': '#00d9ff', // Bright cyan for highlights
+            
+            positive: '#39FF14',   // Neon green
+            negative: '#FF3131',   // Neon red
+          },
+          boxShadow: {
+            'glow-accent': '0 0 15px 0 rgba(255, 64, 129, 0.6)',
+            'glow-positive': '0 0 15px 0 rgba(57, 255, 20, 0.6)',
+            'glow-negative': '0 0 15px 0 rgba(255, 49, 49, 0.6)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif; /* A nice default sans-serif font */
+      background: linear-gradient(135deg, #0d0221 0%, #261447 100%);
+    }
+    .glassmorphism {
+      background: rgba(42, 50, 125, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    /* For better scrollbar styling in dark mode */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d0221; /* primary color */
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ff4081; /* accent color */
+      border-radius: 4px;
+      border: 2px solid #0d0221; /* primary color */
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #ff79b0; /* Lighter accent */
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/",
+    "recharts": "https://esm.sh/recharts@^2.15.3"
+  }
+}
+</script>
+</head>
+<body class="bg-primary">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

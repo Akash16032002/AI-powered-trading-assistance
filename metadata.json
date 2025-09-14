@@ -1,0 +1,6 @@
+{
+  "name": "AI Options Trader",
+  "description": "An AI-powered options trading assistant providing market analysis, trade signals, and option chain visualization for Indian stock market indices.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
